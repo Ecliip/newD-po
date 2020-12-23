@@ -1,1 +1,32 @@
-<p>questions works!</p>
+<div class="w-full h-full flex flex-row">
+  <div class="h-full flex flex-col w-5/6">
+    <h3>Pregunta 1</h3>
+    <div class="flex flex-row w-full border-solid border-black border-b-2">
+<!--      TODO Replace this button with an icon -->
+      <button class="w-1/5 border-solid border-gray border-2 text-center py-1 px-2">Guardar</button>
+      <div class="w-1/5 flex flex-row justify-evenly items-center">
+        <label for="type">Tipo</label>
+<!--        TODO create different layouts for each type of questions -->
+        <select id="type">
+          <option>Tipo 1</option>
+          <option>Tipo 2</option>
+          <option>Tipo 3</option>
+          <option>Tipo 4</option>
+        </select>
+      </div>
+        <!--      TODO Replace this button with an icon -->
+        <button class="w-1/5 border-solid border-gray border-2 text-center py-1 px-2">Imagen</button>
+    </div>
+    <p>Layout for each question</p>
+    <button class="w-1/4 border-solid border-gray border-2 text-center py-1 px-2 self-end justify-self-end">Crear otra pregunta</button>
+  </div>
+  <div class="w-1/6">
+<!--    TODO replace these questions with dynamic content-->
+    <ul>
+      <li>Pregunta 1</li>
+      <li>Pregunta 2</li>
+      <li>Pregunta 3</li>
+      <li>Pregunta 4</li>
+    </ul>
+  </div>
+</div>
