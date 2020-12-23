@@ -1,1 +1,28 @@
-<p>final-screen works!</p>
+<div class="h-full w-full">
+  <h2>Pantalla final</h2>
+  <div class="w-full flex flex-row">
+    <p class="w-1/3 text-center"># de preguntas: <span id="totalQuestions">5</span></p>
+    <p class="w-1/3 text-center">Máximos puntos: <span id="totalQuestions">15</span></p>
+    <p class="w-1/3 text-center">Mínimos puntos: <span id="totalQuestions">10</span></p>
+  </div>
+  <div class="w-full">
+    <div class="w-full flex flex-row justify-start items-center mb-3">
+      <label class="w-1/3 text-right mr-6" for="finalPoints">Mostrar puntuación final</label>
+      <input type="checkbox" name="finalPoints" id="finalPoints"/>
+    </div>
+    <div class="w-full flex flex-row justify-start items-center mb-3">
+      <label class="w-1/3 text-right mr-6" for="showPercents">Mostrar porcentajes</label>
+      <input type="checkbox" name="showPercents" id="showPercents"/>
+    </div>
+    <div class="w-full flex flex-row justify-start items-center mb-3">
+      <label class="w-1/3 text-right mr-6" for="showTime">Mostrar tiempo empleado</label>
+      <input type="checkbox" name="showTime" id="showTime"/>
+    </div>
+    <div class="w-full flex flex-row justify-start items-center mb-3">
+      <label class="w-1/3 text-right mr-6" for="showSuitable">Mostrar apto con una puntuación al menos: </label>
+      <input class="mr-4" type="checkbox" name="showSuitable" id="showSuitable"/>
+      <input class="text-center border-solid border-gray border-2" name="suitableLevel" value="50" type="number" min=50 max=100>
+      <span>%</span>
+    </div>
+  </div>
+</div>
