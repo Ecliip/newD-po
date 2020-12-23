@@ -1,4 +1,4 @@
-<div class="min-h-full w-full">
+<div class="h-screen w-full flex flex-col justify-start">
   <header class="w-full mb-5 py-3 px-2 border-solid border-black border-b-2">
     <ul class="w-full flex flex-row justify-evenly">
       <li><a class="flex-1" [routerLink]="['/create']">Proyecto</a></li>
@@ -11,5 +11,10 @@
     </ul>
   </header>
 
+<div class="h-full">
   <router-outlet></router-outlet>
+</div>
+
+
+
 </div>

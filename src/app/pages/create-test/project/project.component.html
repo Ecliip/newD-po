@@ -1,13 +1,33 @@
-<div class="min-h-screen w-full">
+<div class="h-full w-full flex flex-col justify-start items-evenly">
   <div class="flex flex-row w-full justify-evenly mb-5">
     <a class="w-1/4 border-solid border-gray border-2 text-center py-1 px-2">Nuevo test</a>
     <a class="w-1/4 border-solid border-gray border-2 text-center py-1 px-2">Abrir test</a>
     <a class="w-1/4 border-solid border-gray border-2 text-center py-1 px-2">Guardar test</a>
   </div>
-  <div class="w-full flex flex-col justify-center items-center">
-    <div class="w-full flex flex-row justify-center items-center">
-      <label class="mr-2">Título</label>
+  <div class="w-full flex flex-col justify-start">
+    <div class="w-full flex flex-row justify-start items-center mb-3">
+      <label class="w-1/3 text-right mr-6" for="title">Título</label>
       <input class="border-gray border-solid border-2 py-1 px-2 w-1/5" type="text" name="title" id="title" placeholder="Título..." />
     </div>
+    <div class="flex flex-row w-full justify-start items-center mb-3">
+      <h3 class="w-1/3 text-right mr-6">Order de las cuestiones</h3>
+      <label class="mr-2"  for="random">Aleatorio</label>
+      <input class="mr-4" type="radio" name="order" value="random" id="random">
+      <label class="mr-2" for="linear">Orden de creación</label>
+      <input type="radio" name="order" value="linear" id="linear">
+    </div>
+      <div class="w-full flex flex-row justify-start items-center mb-3">
+        <label class="w-1/3 text-right mr-6" for="repeat">Volver a preguntar pregutar falladas</label>
+        <input type="checkbox" name="repeat" id="repeat"/>
+      </div>
+      <div class="w-full flex flex-row justify-start items-center mb-3">
+        <label class="w-1/3 text-right mr-6" for="noAnswer">Permitir dejar preguntas sin contestar</label>
+        <input type="checkbox" name="noAnswer" id="noAnswer"/>
+      </div>
+      <div class="w-full flex flex-row justify-start items-center">
+        <label class="w-1/3 text-right mr-6" for="answerLater">Permitir dejar preguntas para contestar más tarde</label>
+        <input type="checkbox" name="answerLater" id="answerLater"/>
+      </div>
   </div>
+  <button class="w-1/4 border-solid border-gray border-2 text-center py-1 px-2 self-end mr-3">Continuar</button>
 </div>
