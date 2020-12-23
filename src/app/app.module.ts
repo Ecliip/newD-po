@@ -9,6 +9,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { CreateTestComponent } from './pages/create-test/create-test.component';
 import { ProjectComponent } from './pages/create-test/project/project.component';
 import { QuestionsComponent } from './pages/create-test/questions/questions.component';
+import { FinalScreenComponent } from './pages/create-test/final-screen/final-screen.component';
+import { PreviewComponent } from './pages/create-test/preview/preview.component';
+import { PublicComponent } from './pages/create-test/public/public.component';
+import { ExitComponent } from './pages/create-test/exit/exit.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { QuestionsComponent } from './pages/create-test/questions/questions.comp
     CreateTestComponent,
     ProjectComponent,
     QuestionsComponent,
+    FinalScreenComponent,
+    PreviewComponent,
+    PublicComponent,
+    ExitComponent,
   ],
   imports: [
     BrowserModule,
