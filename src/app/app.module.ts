@@ -13,6 +13,14 @@ import { FinalScreenComponent } from './pages/create-test/final-screen/final-scr
 import { PreviewComponent } from './pages/create-test/preview/preview.component';
 import { PublicComponent } from './pages/create-test/public/public.component';
 import { ExitComponent } from './pages/create-test/exit/exit.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileHomeComponent } from './pages/profile/profile-home/profile-home.component';
+import { ProfileTestsComponent } from './pages/profile/profile-tests/profile-tests.component';
+import { ProfileCommentsComponent } from './pages/profile/profile-comments/profile-comments.component';
+import { ProfileRecordsComponent } from './pages/profile/profile-records/profile-records.component';
+import { ProfileStatisticsComponent } from './pages/profile/profile-statistics/profile-statistics.component';
+import { ProfileFriendsComponent } from './pages/profile/profile-friends/profile-friends.component';
+import { ProfileMessagesComponent } from './pages/profile/profile-messages/profile-messages.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +35,14 @@ import { ExitComponent } from './pages/create-test/exit/exit.component';
     PreviewComponent,
     PublicComponent,
     ExitComponent,
+    ProfileComponent,
+    ProfileHomeComponent,
+    ProfileTestsComponent,
+    ProfileCommentsComponent,
+    ProfileRecordsComponent,
+    ProfileStatisticsComponent,
+    ProfileFriendsComponent,
+    ProfileMessagesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<div class="min-h-screen w-full">
+  <h2>Actividad de <span>Usuario</span></h2>
+  <nav class="">
+    <ul class="flex flex-row justify-evenly items-center">
+      <li><a [routerLink]="['/profile']">Home</a></li>
+      <li><a [routerLink]="['/profile/tests']">Tests</a></li>
+      <li><a [routerLink]="['/profile/comments']">Comentarios</a></li>
+      <li><a [routerLink]="['/profile/records']">Récords</a></li>
+      <li><a [routerLink]="['/profile/statistics']">Estadísticas</a></li>
+      <li><a [routerLink]="['/profile/friends']">Amigos</a></li>
+      <li><a [routerLink]="['/profile/messages']">Mensajes</a></li>
+    </ul>
+  </nav>
+  <div class="h-screen w-full">
+    <router-outlet></router-outlet>
+  </div>
+</div>
