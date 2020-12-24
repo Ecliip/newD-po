@@ -1,7 +1,7 @@
 <div class="min-h-screen w-full">
   <h2>Actividad de <span>Usuario</span></h2>
-  <nav class="">
-    <ul class="flex flex-row justify-evenly items-center">
+  <nav class="py-2 border-gray border-solid border-b-2">
+    <ul class="flex flex-row justify-evenly items-center ">
       <li><a [routerLink]="['/profile']">Home</a></li>
       <li><a [routerLink]="['/profile/tests']">Tests</a></li>
       <li><a [routerLink]="['/profile/comments']">Comentarios</a></li>
@@ -11,7 +11,28 @@
       <li><a [routerLink]="['/profile/messages']">Mensajes</a></li>
     </ul>
   </nav>
-  <div class="h-screen w-full">
-    <router-outlet></router-outlet>
+  <div class="flex flex-row h-full w-full">
+    <aside class="flex flex-col w-1/6 border-gray border-solid border-r-2">
+      <div class="border-gray border-solid border-b-2 flex flex-col justify-center items-center mb-5">
+        <h3>Autor</h3>
+        <h4>NombreUsuario</h4>
+        <div>
+          <img alt="userPic" src=""/>
+        </div>
+      </div>
+      <div>
+        <h3>Amigos</h3>
+        <ul>
+          <li><a>Lista de amigos</a></li>
+          <li><a>Tests de amigos</a></li>
+          <li><a>Comentarios de amigos</a></li>
+          <li><a>Récords de amigos</a></li>
+          <li><a>Mensajes de amigos</a></li>
+        </ul>
+      </div>
+    </aside>
+    <div class="h-screen w-full">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
