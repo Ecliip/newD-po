@@ -21,6 +21,7 @@ import { ProfileRecordsComponent } from './pages/profile/profile-records/profile
 import { ProfileStatisticsComponent } from './pages/profile/profile-statistics/profile-statistics.component';
 import { ProfileFriendsComponent } from './pages/profile/profile-friends/profile-friends.component';
 import { ProfileMessagesComponent } from './pages/profile/profile-messages/profile-messages.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ProfileMessagesComponent } from './pages/profile/profile-messages/profi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
