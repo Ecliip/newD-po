@@ -30,6 +30,17 @@ app.get('/insert', async (req, res) => {
   } catch (e) {
     res.json({'error': e});
   }
+});
+
+app.get('/insertdata', async (req, res) => {
+  try {
+
+    const query = 'insert into Persons(PersonID, LastName, FirstName, Address, City) values(1, "Jackson", "Andrey", "Street 2-1-3", "Madrid");';
+    const response = (await pool.pool).query(query);
+    res.json({'message': response});
+  } catch (e) {
+    res.json({'error': e});
+  }
 })
 
 app.listen(port, ()=> {
