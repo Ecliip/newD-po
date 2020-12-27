@@ -41,6 +41,18 @@ app.get('/insertdata', async (req, res) => {
   } catch (e) {
     res.json({'error': e});
   }
+});
+
+app.get('/select', async (req, res) => {
+  try {
+
+    const query = 'select * from Persons;';
+    const response = (await pool.pool).query(query).then((data)=> console.log('data', data));
+    res.status(200).json(response);
+    console.log('response', response);
+  } catch (e) {
+    res.json({'error': e});
+  }
 })
 
 app.listen(port, ()=> {
