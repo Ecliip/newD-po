@@ -1,19 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const mysql = require('mysql2');
+const pool = require('./database');
 
-const db = mysql.createConnection({
-  host: '127.0.0.1',
-  user: 'root',
-  database: 'd_po'
-})
-
-db.connect((err) => {
-  if(err) {
-    throw err;
-  }
-  console.log('MySql connected')
-});
 
 const app = express();
 const port = 3000;
@@ -27,30 +15,22 @@ app.get('/welcome', function (req, res) {
   res.send('Hello World 2!')
 });
 
-app.get('/createdb', (req, res) => {
-  const sql = 'create database d_po';
-  db.query(sql, (err, result) => {
-    if(err) {
-      throw err;
-    }
-   res.json({'message': result})
-  })
-});
+app.get('/insert', async (req, res) => {
+  try {
 
-app.get('/create_post_table', (req, res) => {
-  const sql = 'create table posts(id int auto_increment, title varchar(255), body varchar(255), primary key id)';
-  db.query(sql, (err, result) => {
-      if (err) {
-        throw err;
-      }
-      ;
-      res.json({
-        'message': 'Query submitted',
-        'response': result
-      });
-    }
-  )
-});
+    const query = 'CREATE TABLE Persons (\n' +
+      '    PersonID int,\n' +
+      '    LastName varchar(255),\n' +
+      '    FirstName varchar(255),\n' +
+      '    Address varchar(255),\n' +
+      '    City varchar(255)\n' +
+      ');';
+    const response = (await pool.pool).query(query);
+    res.json({'message': response});
+  } catch (e) {
+    res.json({'error': e});
+  }
+})
 
 app.listen(port, ()=> {
   console.log(`This app is listening at ${port}`);
