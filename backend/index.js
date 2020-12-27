@@ -3,8 +3,9 @@ const cors = require('cors');
 const mysql = require('mysql2');
 
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: '127.0.0.1',
   user: 'root',
+  database: 'd_po'
 })
 
 db.connect((err) => {
@@ -34,10 +35,25 @@ app.get('/createdb', (req, res) => {
     }
    res.json({'message': result})
   })
-})
+});
+
+app.get('/create_post_table', (req, res) => {
+  const sql = 'create table posts(id int auto_increment, title varchar(255), body varchar(255), primary key id)';
+  db.query(sql, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      ;
+      res.json({
+        'message': 'Query submitted',
+        'response': result
+      });
+    }
+  )
+});
 
 app.listen(port, ()=> {
-  console.log(`This app is listenning at ${port}`);
+  console.log(`This app is listening at ${port}`);
 });
 
 
