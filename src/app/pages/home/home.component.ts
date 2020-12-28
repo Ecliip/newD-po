@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {DbService} from '../../services/db.service';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +9,10 @@ import {HttpClient} from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private dbService: DbService) {
   }
 
   ngOnInit(): void {
-    const options = {responseType: 'text'};
-    const mess = this.http.get<any>('http://localhost:3000').subscribe( d =>
-    console.log( d));
-    console.log(mess);
+    this.dbService.getAllPersons().subscribe( d => console.log(d));
   }
 }

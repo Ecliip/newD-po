@@ -3,6 +3,7 @@ Configuración de tailwind: https://notiz.dev/blog/angular-10-with-tailwindcss#r
 configuracion de docker:
 https://www.youtube.com/watch?v=fhRtAYTF6vk&ab_channel=FaztCode
 https://hub.docker.com/r/mariadb/server
+https://www.npmjs.com/package/mariadb
 
 
 mysql:
