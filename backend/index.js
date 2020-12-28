@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const pool = require('./database');
 
-// TODO figure out how to retain data when execute SELECT statement in sql
+// TODO add Foreign key to Questions table
 
 const app = express();
 const port = 3000;
