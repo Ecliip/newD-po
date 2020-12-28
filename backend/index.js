@@ -45,16 +45,14 @@ app.get('/insertdata', async (req, res) => {
 });
 
 app.get('/select', async (req, res) => {
-  try {
-
-    const query = 'select * from Persons;';
-    const response = (await pool.pool).query(query).then((data)=> console.log('data', data));
-    res.status(200).json(response);
-    console.log('response', response);
-  } catch (e) {
-    res.json({'error': e});
-  }
-})
+  pool.pool.getConnection()
+    .then(conn => {
+    conn.query("select * from Persons")
+      .then(rows => {
+        res.json(rows);
+      });
+  });
+});
 
 app.listen(port, ()=> {
   console.log(`This app is listening at ${port}`);

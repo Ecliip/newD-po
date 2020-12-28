@@ -1,1 +1,14 @@
 Configuración de tailwind: https://notiz.dev/blog/angular-10-with-tailwindcss#remove-unused-css-styles
+
+configuracion de docker:
+https://www.youtube.com/watch?v=fhRtAYTF6vk&ab_channel=FaztCode
+https://hub.docker.com/r/mariadb/server
+
+
+mysql:
+1. mysql --host 127.0.0.1 -P 3307 -u root -p
+1.2 enter password
+
+2. use databaseName;
+3. select database();
+
